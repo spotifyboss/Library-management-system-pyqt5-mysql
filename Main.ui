@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1080</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Library System</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icon_solid/solid/book-open.svg</normaloff>:/icon_solid/solid/book-open.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	border: 0px;
+}
+
+#sideBar{
+	background-color:rgb(64, 85, 114);
+}
+
+#dashboardButton,#searchButton,#addButton,#borrowButton,#statisticsButton,#returnBookButton{
+	background-color:rgb(64, 85, 114);
+	color: white;
+}
+
+#dashboardButton::hover,#searchButton::hover,#addButton::hover,#borrowButton::hover,#statisticsButton::hover,#returnBookButton::hover{
+	background-color:rgb(83, 112, 149);
+}
+
+#mainStackedWidget{
+	background-color:qlineargradient(spread:repeat, x1:0.198721, y1:0.79, x2:1, y2:1, stop:0 rgba(234, 129, 255, 255), stop:1 rgba(0, 0, 127, 255));
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="sideBar">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_7" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label">
+            <property name="toolTip">
+             <string>Welcome</string>
+            </property>
+            <property name="toolTipDuration">
+             <number>0</number>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="resources.qrc">:/icons/icons/book-open.svg</pixmap>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="buttonContainerWidget" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="dashboardButton">
+            <property name="text">
+             <string>Dashboard</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icon_brand/brands/dashcube.svg</normaloff>:/icon_brand/brands/dashcube.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="searchButton">
+            <property name="text">
+             <string>Search</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icon_solid/solid/magnifying-glass.svg</normaloff>:/icon_solid/solid/magnifying-glass.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addButton">
+            <property name="text">
+             <string>Add</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icon_solid/solid/plus.svg</normaloff>:/icon_solid/solid/plus.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="borrowButton">
+            <property name="text">
+             <string>Borrow</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icon_solid/solid/book-open-reader.svg</normaloff>:/icon_solid/solid/book-open-reader.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="statisticsButton">
+            <property name="text">
+             <string>Statistics</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icon_solid/solid/chart-pie.svg</normaloff>:/icon_solid/solid/chart-pie.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="returnBookButton">
+            <property name="text">
+             <string>Return Book</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icon_solid/solid/arrow-turn-down.svg</normaloff>:/icon_solid/solid/arrow-turn-down.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="stackedWidgetContainerWidget" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QStackedWidget" name="mainStackedWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="dashboardPage">
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>660</x>
+             <y>290</y>
+             <width>55</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="tableWidget">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>350</y>
+             <width>621</width>
+             <height>331</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="searchPage">
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>370</x>
+             <y>110</y>
+             <width>55</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>search</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="addPage">
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>174</x>
+             <y>220</y>
+             <width>211</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>add </string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="borrowPage">
+          <widget class="QLabel" name="label_5">
+           <property name="geometry">
+            <rect>
+             <x>390</x>
+             <y>240</y>
+             <width>55</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>borrow</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="statisticsPage">
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>360</x>
+             <y>220</y>
+             <width>55</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>statistics</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="returnBookPage">
+          <widget class="QLabel" name="label_7">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>190</y>
+             <width>55</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>return book</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1080</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuBooks_Items">
+    <property name="title">
+     <string>Books</string>
+    </property>
+    <addaction name="actionAdd_Books"/>
+    <addaction name="actionEdit_Books"/>
+    <addaction name="actionRemove"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint_QR_Code"/>
+   </widget>
+   <widget class="QMenu" name="menuBorrower">
+    <property name="title">
+     <string>Borrower</string>
+    </property>
+    <widget class="QMenu" name="menuAdd">
+     <property name="title">
+      <string>Add</string>
+     </property>
+     <addaction name="actionStuden"/>
+     <addaction name="actionTeacher"/>
+    </widget>
+    <widget class="QMenu" name="menuModify">
+     <property name="title">
+      <string>Modify</string>
+     </property>
+     <addaction name="actionStudent"/>
+     <addaction name="actionTeacher_2"/>
+    </widget>
+    <widget class="QMenu" name="menuRemove">
+     <property name="title">
+      <string>Remove</string>
+     </property>
+     <addaction name="actionStudent_2"/>
+     <addaction name="actionTeacher_3"/>
+    </widget>
+    <addaction name="menuAdd"/>
+    <addaction name="menuModify"/>
+    <addaction name="menuRemove"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint_ID"/>
+   </widget>
+   <widget class="QMenu" name="menuStatistics">
+    <property name="title">
+     <string>Statistics</string>
+    </property>
+    <addaction name="actionBooks"/>
+    <addaction name="actionBorrowers"/>
+   </widget>
+   <widget class="QMenu" name="menuMore">
+    <property name="title">
+     <string>More</string>
+    </property>
+    <widget class="QMenu" name="menuExport">
+     <property name="title">
+      <string>Export</string>
+     </property>
+     <addaction name="actionStudent_Data"/>
+     <addaction name="actionBooks_data"/>
+     <addaction name="actionAll_data"/>
+    </widget>
+    <addaction name="menuExport"/>
+    <addaction name="actionImport"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_Us"/>
+    <addaction name="actionAbout_Qt"/>
+   </widget>
+   <addaction name="menuBooks_Items"/>
+   <addaction name="menuBorrower"/>
+   <addaction name="menuStatistics"/>
+   <addaction name="menuMore"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <action name="actionAdd_Books">
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionEdit_Books">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </action>
+  <action name="actionPrint_QR_Code">
+   <property name="text">
+    <string>Print QR Code</string>
+   </property>
+  </action>
+  <action name="actionStuden">
+   <property name="text">
+    <string>Student</string>
+   </property>
+  </action>
+  <action name="actionTeacher">
+   <property name="text">
+    <string>Teacher</string>
+   </property>
+  </action>
+  <action name="actionStudent">
+   <property name="text">
+    <string>Student</string>
+   </property>
+  </action>
+  <action name="actionTeacher_2">
+   <property name="text">
+    <string>Teacher</string>
+   </property>
+  </action>
+  <action name="actionStudent_2">
+   <property name="text">
+    <string>Student</string>
+   </property>
+  </action>
+  <action name="actionTeacher_3">
+   <property name="text">
+    <string>Teacher</string>
+   </property>
+  </action>
+  <action name="actionPrint_ID">
+   <property name="text">
+    <string>Print ID</string>
+   </property>
+  </action>
+  <action name="actionBooks">
+   <property name="text">
+    <string>Books</string>
+   </property>
+  </action>
+  <action name="actionBorrowers">
+   <property name="text">
+    <string>Borrowers</string>
+   </property>
+  </action>
+  <action name="actionStudent_Data">
+   <property name="text">
+    <string>Student Data</string>
+   </property>
+  </action>
+  <action name="actionBooks_data">
+   <property name="text">
+    <string>Books data</string>
+   </property>
+  </action>
+  <action name="actionAll_data">
+   <property name="text">
+    <string>All data</string>
+   </property>
+  </action>
+  <action name="actionAll">
+   <property name="text">
+    <string>All</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionAbout_Us">
+   <property name="text">
+    <string>About us</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
