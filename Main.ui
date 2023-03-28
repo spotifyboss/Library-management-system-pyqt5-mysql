@@ -14,7 +14,7 @@
    <string>Library System</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources.qrc">
+   <iconset>
     <normaloff>:/icon_solid/solid/book-open.svg</normaloff>:/icon_solid/solid/book-open.svg</iconset>
   </property>
   <property name="styleSheet">
@@ -90,7 +90,7 @@
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="resources.qrc">:/icons/icons/book-open.svg</pixmap>
+             <pixmap>:/icons/icons/book-open.svg</pixmap>
             </property>
            </widget>
           </item>
@@ -121,7 +121,7 @@
              <string>Dashboard</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/icon_brand/brands/dashcube.svg</normaloff>:/icon_brand/brands/dashcube.svg</iconset>
             </property>
             <property name="iconSize">
@@ -151,7 +151,7 @@
              <string>Search</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/icon_solid/solid/magnifying-glass.svg</normaloff>:/icon_solid/solid/magnifying-glass.svg</iconset>
             </property>
             <property name="iconSize">
@@ -181,7 +181,7 @@
              <string>Add</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/icon_solid/solid/plus.svg</normaloff>:/icon_solid/solid/plus.svg</iconset>
             </property>
             <property name="iconSize">
@@ -211,7 +211,7 @@
              <string>Borrow</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/icon_solid/solid/book-open-reader.svg</normaloff>:/icon_solid/solid/book-open-reader.svg</iconset>
             </property>
             <property name="iconSize">
@@ -241,7 +241,7 @@
              <string>Statistics</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/icon_solid/solid/chart-pie.svg</normaloff>:/icon_solid/solid/chart-pie.svg</iconset>
             </property>
             <property name="iconSize">
@@ -271,7 +271,7 @@
              <string>Return Book</string>
             </property>
             <property name="icon">
-             <iconset resource="resources.qrc">
+             <iconset>
               <normaloff>:/icon_solid/solid/arrow-turn-down.svg</normaloff>:/icon_solid/solid/arrow-turn-down.svg</iconset>
             </property>
             <property name="iconSize">
