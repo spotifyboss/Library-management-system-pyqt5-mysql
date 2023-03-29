@@ -14,7 +14,7 @@
    <string>Library System</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="resources.qrc">
     <normaloff>:/icon_solid/solid/book-open.svg</normaloff>:/icon_solid/solid/book-open.svg</iconset>
   </property>
   <property name="styleSheet">
@@ -36,9 +36,13 @@
 }
 
 #mainStackedWidget{
-	background-color:qlineargradient(spread:repeat, x1:0.198721, y1:0.79, x2:1, y2:1, stop:0 rgba(234, 129, 255, 255), stop:1 rgba(0, 0, 127, 255));
+	background-color:rgb(176, 191, 203);
 }
-</string>
+
+#logTable{
+	background-color:rgb(64, 85, 114);
+	color: white;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -90,7 +94,7 @@
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap>:/icons/icons/book-open.svg</pixmap>
+             <pixmap resource="resources.qrc">:/icons/icons/book-open.svg</pixmap>
             </property>
            </widget>
           </item>
@@ -121,7 +125,7 @@
              <string>Dashboard</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="resources.qrc">
               <normaloff>:/icon_brand/brands/dashcube.svg</normaloff>:/icon_brand/brands/dashcube.svg</iconset>
             </property>
             <property name="iconSize">
@@ -151,7 +155,7 @@
              <string>Search</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="resources.qrc">
               <normaloff>:/icon_solid/solid/magnifying-glass.svg</normaloff>:/icon_solid/solid/magnifying-glass.svg</iconset>
             </property>
             <property name="iconSize">
@@ -181,7 +185,7 @@
              <string>Add</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="resources.qrc">
               <normaloff>:/icon_solid/solid/plus.svg</normaloff>:/icon_solid/solid/plus.svg</iconset>
             </property>
             <property name="iconSize">
@@ -211,7 +215,7 @@
              <string>Borrow</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="resources.qrc">
               <normaloff>:/icon_solid/solid/book-open-reader.svg</normaloff>:/icon_solid/solid/book-open-reader.svg</iconset>
             </property>
             <property name="iconSize">
@@ -241,7 +245,7 @@
              <string>Statistics</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="resources.qrc">
               <normaloff>:/icon_solid/solid/chart-pie.svg</normaloff>:/icon_solid/solid/chart-pie.svg</iconset>
             </property>
             <property name="iconSize">
@@ -271,7 +275,7 @@
              <string>Return Book</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="resources.qrc">
               <normaloff>:/icon_solid/solid/arrow-turn-down.svg</normaloff>:/icon_solid/solid/arrow-turn-down.svg</iconset>
             </property>
             <property name="iconSize">
@@ -341,13 +345,48 @@
             <string>Dashboard</string>
            </property>
           </widget>
-          <widget class="QTableWidget" name="tableWidget">
+          <widget class="QTableWidget" name="logTable">
            <property name="geometry">
             <rect>
              <x>10</x>
              <y>350</y>
-             <width>621</width>
+             <width>501</width>
              <height>331</height>
+            </rect>
+           </property>
+           <column>
+            <property name="text">
+             <string>id</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Type</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Book</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Time</string>
+            </property>
+           </column>
+          </widget>
+          <widget class="QTableView" name="tableView">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>140</y>
+             <width>256</width>
+             <height>192</height>
             </rect>
            </property>
           </widget>
@@ -440,7 +479,7 @@
      <x>0</x>
      <y>0</y>
      <width>1080</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="defaultUp">
